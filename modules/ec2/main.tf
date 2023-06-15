@@ -6,11 +6,15 @@ variable "instance_count" {}
 
 variable "ebs_volume_size" {}
 
+variable "vpc_subnet_id" {
+  description = "ID of the VPC subnet"
+}
+
 resource "aws_instance" "main" {
   count         = var.instance_count
   ami           = "ami-12345678"  # Replace with the desired AMI ID
   instance_type = var.instance_type
-  subnet_id     = module.vpc.subnet_id
+  subnet_id     = var.vpc_subnet_id
 
   tags = {
     Name = "EC2Instance-${count.index}"
