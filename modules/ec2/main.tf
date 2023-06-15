@@ -12,7 +12,7 @@ resource "aws_instance" "main" {
   count         = var.instance_count
   ami           = "ami-12345678"  # Replace with the desired AMI ID
   instance_type = var.instance_type
-  vpc_subnet_id = var.vpc_subnet_id
+  subnet_id     = var.vpc_subnet_id
 
   tags = {
     Name = "EC2Instance-${count.index}"
