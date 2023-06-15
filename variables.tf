@@ -36,4 +36,6 @@ variable "ebs_volume_size" {
 
 variable "vpc_subnet_id" {
   description = "ID of the VPC subnet"
+  type        = list(string)
+  default     = []
 }
