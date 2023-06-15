@@ -11,5 +11,5 @@ module "ec2" {
   instance_type     = var.instance_type
   instance_count    = var.instance_count
   ebs_volume_size   = var.ebs_volume_size
-  vpc_subnet_id     = module.vpc.subnet_id
+  vpc_subnet_id     = var.vpc_subnet_id
 }

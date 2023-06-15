@@ -33,3 +33,7 @@ variable "ebs_volume_size" {
   type        = number
   default     = 10
 }
+
+variable "vpc_subnet_id" {
+  description = "ID of the VPC subnet"
+}
