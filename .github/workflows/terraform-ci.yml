@@ -33,8 +33,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run tfs ec
-        run: tfs ec .
+      - name: Run tfsec
+        run: tfsec .
 
   release:
     name: Release Terraform
