@@ -8,9 +8,7 @@ resource "aws_vpc" "main" {
   cidr_block           = var.vpc_cidr_block
   enable_dns_hostnames = true
 
-    lifecycle {
-    ignore_changes = [tags]  # Ignore changes to tags
-  }
+
   tags = {
     Name = "MyVPC"
   }
