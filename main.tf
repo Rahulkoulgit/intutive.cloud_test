@@ -12,5 +12,4 @@ module "ec2" {
   instance_count    = var.instance_count
   ebs_volume_size   = var.ebs_volume_size
   vpc_subnet_id     = var.vpc_subnet_id
-  ami               = "ami-12345678"  # Replace with the desired AMI ID
 }
