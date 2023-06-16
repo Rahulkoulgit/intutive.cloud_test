@@ -3,7 +3,6 @@ module "vpc" {
   aws_region      = var.aws_region
   vpc_cidr_block  = var.vpc_cidr_block
   subnet_cidr_block = var.subnet_cidr_block
-  enable_flow_logs    = true
 }
 
 module "ec2" {
