@@ -42,22 +42,22 @@ jobs:
       - name: Run tfsec
         run: tfsec .
 
-  release:
-    name: Release Terraform
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_version: latest
-
-      - name: Terraform Init
-        run: terraform init
-
-      - name: Terraform Plan
-        run: terraform plan
-        # Add steps for Terraform apply or any other release actions
+#  release:
+#    name: Release Terraform
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v2
+#
+#      - name: Setup Terraform
+#        uses: hashicorp/setup-terraform@v1
+#        with:
+#          terraform_version: latest
+#
+#      - name: Terraform Init
+#        run: terraform init
+#
+#      - name: Terraform Plan
+#        run: terraform plan
+#        # Add steps for Terraform apply or any other release actions
