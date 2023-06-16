@@ -34,3 +34,6 @@ resource "aws_volume_attachment" "main" {
   instance_id = aws_instance.main[count.index].id
   volume_id   = aws_ebs_volume.main[count.index].id
 }
+ metadata_options {
+    http_tokens = "required"  # Resolution for IMDS access
+  }

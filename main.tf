@@ -3,6 +3,7 @@ module "vpc" {
   aws_region      = var.aws_region
   vpc_cidr_block  = var.vpc_cidr_block
   subnet_cidr_block = var.subnet_cidr_block
+  enable_flow_logs    = true
 }
 
 module "ec2" {
@@ -12,4 +13,5 @@ module "ec2" {
   instance_count    = var.instance_count
   ebs_volume_size   = var.ebs_volume_size
   vpc_subnet_id     = var.vpc_subnet_id
+  ami               = "ami-12345678"  # Replace with the desired AMI ID
 }
