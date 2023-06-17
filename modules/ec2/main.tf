@@ -35,3 +35,11 @@ resource "aws_volume_attachment" "main" {
   volume_id   = aws_ebs_volume.main[count.index].id
 }
 
+resource "aws_s3_bucket" "main" {
+  bucket = "my-terraform-bucket-rahulkoul"
+  acl    = "private"
+
+  tags = {
+    Name = "TerraformBucket"
+  }
+}

@@ -13,3 +13,11 @@ module "ec2" {
   ebs_volume_size   = var.ebs_volume_size
   vpc_subnet_id     = var.vpc_subnet_id
 }
+resource "aws_s3_bucket" "main" {
+  bucket = "my-terraform-bucket-rahulkoul"
+  acl    = "private"
+
+  tags = {
+    Name = "TerraformBucket"
+  }
+}
